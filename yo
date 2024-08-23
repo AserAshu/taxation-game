@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Quest</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Tax Quest</h1>
+        <div id="ca-selection">
+            <h2>Select Your CA</h2>
+            <button onclick="selectCA('fast')">Fast Processing (High Fee, Low Reduction)</button>
+            <button onclick="selectCA('balanced')">Balanced (Medium Fee, Medium Reduction)</button>
+            <button onclick="selectCA('cheap')">Low Fee (Low Fee, Low Reduction)</button>
+        </div>
+        <div id="mini-game" style="display:none;">
+            <h2>Mini-Game: 2048 Variant</h2>
+            <div id="game-board">
+                <div class="tile" id="tile-1">2</div>
+                <div class="tile" id="tile-2"></div>
+                <div class="tile" id="tile-3"></div>
+                <div class="tile" id="tile-4"></div>
+            </div>
+            <p id="challenge-timer">Challenge Time Left: <span id="challenge-time-left">60</span> seconds</p>
+            <button onclick="moveTiles('left')">←</button>
+            <button onclick="moveTiles('right')">→</button>
+            <button onclick="moveTiles('up')">↑</button>
+            <button onclick="moveTiles('down')">↓</button>
+            <p id="message"></p>
+        </div>
+        <div id="timer">Time Remaining: <span id="time-left">600</span> seconds</div>
+        <button id="quit-button" onclick="quitGame()">I Quit</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
